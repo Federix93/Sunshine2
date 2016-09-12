@@ -5,10 +5,14 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View root = inflater.inflate(R.layout.fragment_main, container);
+            String[] forecast = {
+                    "ciao pezzo di merda",
+                    "ciao pezzo di fango",
+                    "ciao pezzo di feccia",
+                    "ciao pezzo di munnizza",
+            };
+
+            List<String> weekItem = new ArrayList<String>(Arrays.asList(forecast));
             return root;
         }
     }
